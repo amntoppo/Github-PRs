@@ -10,5 +10,5 @@ interface GithubApi {
     }
 
     @GET("users/amntoppo/repos")
-    suspend fun getPRList(): List<RepositoryModelItem>
+    suspend fun getRepoList(): List<RepositoryModelItem>
 }
