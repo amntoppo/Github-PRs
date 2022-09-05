@@ -3,6 +3,7 @@ package io.aman.githubprs.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,7 +32,17 @@ class RepositoryAdapter(private val onClickListener: RepositoryOnClickListener) 
             binding.apply {
                 repositoryTitle.text = repository.name
                 repositoryDescription.text = repository.description
-
+                forkTextView.text = repository.forks.toString()
+                starTextView.text = repository.stargazers_count.toString()
+                if(repository.language != null) {
+                    languageImageView.visibility = View.VISIBLE
+                    languageTextView.visibility = View.VISIBLE
+                    languageTextView.text = repository.language
+                }
+                else {
+                    languageImageView.visibility = View.INVISIBLE
+                    languageTextView.visibility = View.INVISIBLE
+                }
                 root.setOnClickListener {
                     onClickListener.onRepositoryClick(repository)
                 }

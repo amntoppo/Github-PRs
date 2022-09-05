@@ -8,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import io.aman.githubprs.R
 import io.aman.githubprs.data.model.RepositoryModelItem
 import io.aman.githubprs.databinding.FragmentRepositoryBinding
 import io.aman.githubprs.view.RepositoryOnClickListener
@@ -42,6 +45,11 @@ class RepositoryFragment: Fragment(), RepositoryOnClickListener {
     }
 
     override fun onRepositoryClick(modelItem: RepositoryModelItem) {
+        val bundle = Bundle()
+        bundle.putString("repository_name", modelItem.name)
+        val navHostFragment =
+            activity?.supportFragmentManager?.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        navHostFragment.navController.navigate(R.id.action_navigation_repository_to_navigation_pullrequest, bundle)
         Log.e("github", modelItem.pulls_url)
         Toast.makeText(this@RepositoryFragment.context, modelItem.name, Toast.LENGTH_LONG).show()
     }

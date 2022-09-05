@@ -1,7 +1,9 @@
 package io.aman.githubprs.api
 
+import io.aman.githubprs.data.model.PullRequestModel
 import io.aman.githubprs.data.model.RepositoryModelItem
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface GithubApi {
 
@@ -12,5 +14,6 @@ interface GithubApi {
     @GET("users/amntoppo/repos")
     suspend fun getRepoList(): List<RepositoryModelItem>
 
-    suspend fun getPRList(): 
+    @GET("/repos/amntoppo/{repositoryName}/pulls")
+    suspend fun getPRList(@Path("repositoryName") repositoryName: String): List<PullRequestModel>
 }
