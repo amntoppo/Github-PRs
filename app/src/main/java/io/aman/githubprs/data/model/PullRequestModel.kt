@@ -1,13 +1,11 @@
 package io.aman.githubprs.data.model
 
 data class PullRequestModel(
-    val _links: Links,
     val active_lock_reason: Any,
     val assignee: Any,
     val assignees: List<Any>,
     val author_association: String,
     val auto_merge: Any,
-    val base: Base,
     val body: Any,
     val closed_at: String,
     val comments_url: String,
@@ -15,7 +13,6 @@ data class PullRequestModel(
     val created_at: String,
     val diff_url: String,
     val draft: Boolean,
-    val head: Head,
     val html_url: String,
     val id: Int,
     val issue_url: String,

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="12dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,16 +31,6 @@
             app:layout_constraintTop_toTopOf="@id/pr_image"
             tools:text="amntoppo" />
 
-        <TextView
-            android:id="@+id/pr_contact_number"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:maxLines="1"
-            app:layout_constraintBottom_toBottomOf="@id/pr_image"
-            app:layout_constraintLeft_toLeftOf="@id/pr_username"
-            app:layout_constraintRight_toRightOf="parent"
-            tools:text="3434343" />
 
         <TextView
             android:id="@+id/pr_title"

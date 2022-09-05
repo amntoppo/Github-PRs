@@ -3,13 +3,12 @@ package io.aman.githubprs.view.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import io.aman.githubprs.data.model.RepositoryModelItem
 import io.aman.githubprs.databinding.RepositoryItemBinding
-import io.aman.githubprs.view.RepositoryOnClickListener
+import io.aman.githubprs.view.listener.RepositoryOnClickListener
 
 class RepositoryAdapter(private val onClickListener: RepositoryOnClickListener) :
     ListAdapter<RepositoryModelItem, RepositoryAdapter.RepositoryViewHolder>(RepositoryComparator()) {

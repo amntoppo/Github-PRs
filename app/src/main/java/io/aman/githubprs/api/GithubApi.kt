@@ -14,6 +14,6 @@ interface GithubApi {
     @GET("users/amntoppo/repos")
     suspend fun getRepoList(): List<RepositoryModelItem>
 
-    @GET("/repos/amntoppo/{repositoryName}/pulls")
+    @GET("/repos/amntoppo/{repositoryName}/pulls?state=closed")
     suspend fun getPRList(@Path("repositoryName") repositoryName: String): List<PullRequestModel>
 }

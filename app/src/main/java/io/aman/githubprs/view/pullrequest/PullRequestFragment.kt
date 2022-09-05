@@ -1,7 +1,6 @@
 package io.aman.githubprs.view.pullrequest
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.aman.githubprs.R
 import io.aman.githubprs.databinding.FragmentPullrequestBinding
 import io.aman.githubprs.view.adapter.PullRequestAdapter
+import io.aman.githubprs.viewmodel.PullRequestViewModel
 
 @AndroidEntryPoint
 class PullRequestFragment: Fragment() {

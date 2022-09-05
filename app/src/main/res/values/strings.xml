@@ -2,5 +2,5 @@
     <string name="app_name">Github PRs</string>
     <string name="repository">Repository</string>
     <string name="pull_request">Pull Request</string>
-    <string name="empty_pull_request">Looks like this Repository has no PR</string>
+    <string name="empty_pull_request">Looks like this Repository has no closed PR</string>
 </resources>

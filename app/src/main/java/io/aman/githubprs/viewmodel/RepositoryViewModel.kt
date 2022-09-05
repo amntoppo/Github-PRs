@@ -1,4 +1,4 @@
-package io.aman.githubprs.view.repository
+package io.aman.githubprs.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
